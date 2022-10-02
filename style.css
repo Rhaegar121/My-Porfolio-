@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    transition: all 0.3s;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 180px auto 0px auto;
+}
+
+/* navbar */
+#navbar {
+    width: 15%;
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+#navbar .box {
+    margin-right: 90px;
+    position: relative;
+    margin-bottom: 75px;
+}
+#navbar a {
+    text-decoration: none;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+#navbar .box a span {
+    padding: 13px 0px 13px 0px;
+    border-radius: 50px;
+    background-color: #ee6192;
+    display: block;
+    opacity: 0;
+    color: #fff;
+    width: fit-content;
+    transform: translateX(-20%);
+}
+#navbar .box-l a span {
+    transform: translateX(-45%);
+}
+#navbar i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 15.5px 24px 24px 15.5px;
+    color: rgb(118, 118, 118);
+    background-color: rgb(237, 237, 237);
+    font-size: 18px;
+    position: absolute;
+    z-index: 1;
+}
+#navbar i:nth-child(2) {
+    padding: 15.5px 24px 24px 17.5px;
+}
+#navbar .box:hover i {
+    color: #fff;
+    background-color: #ee6192;
+    z-index: 999;
+}
+#navbar .box:hover a span {
+    opacity: 1;
+    padding: 13px 48px 13px 15px;
+    transform: translateX(-60%);
+}
+#navbar .box-l:hover a span {
+    opacity: 1;
+    padding: 13px 48px 13px 15px;
+    transform: translateX(-68%);
+}
+
+/* home */
+#home {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+#home .color-block {
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    transform: rotate(-15deg);
+    left: -84%;
+    top: -50%;
+    background-color: #ee6192;
+    z-index: 0;
+}
+
+#img {
+    width: 40%;
+    height: 100vh;
+}
+#img img {
+    width: 480px;
+    height: 650px;
+    border-radius: 20px;
+    margin: 45px;
+    position: fixed;
+    box-shadow: 0px 0px 20px 1px rgb(216, 176, 176);
+}
+
+#content {
+    width: 35%;
+    margin: 220px 250px 0px 100px;
+}
+#content .name {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgb(118, 118, 118);
+    line-height: 60px;
+}
+#content .name p:nth-child(2) {
+    color: #ee6192;
+    display: inline;
+}
+#content .name p {
+    margin-left: 50px;
+}
+#content .name span {
+    color: #ee6192;
+    font-size: 4rem;
+    font-weight: 300;
+    position: absolute;
+}
+#content .description {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgb(69, 69, 69);
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+}
+.btn {
+    border: 1.3px solid #ee6192;
+    border-radius: 50px;
+    padding: 13px 56px 13px 28px;
+    position: relative;
+    text-decoration: none;
+    background-image: linear-gradient(#ee6192, #ee6192);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 0% 100%;
+}
+.btn span {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(69, 69, 69);
+    margin-left: -3px;
+}
+.btn i {
+    position: absolute;
+    font-size: 19px;
+    font-weight: 900;
+    padding: 17.5px 20px 20px 17.5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    transform: translateY(-26%);
+    margin-left: 7px;
+    color: #fff;
+    background-color: #ee6192;
+}
+.btn:hover {
+    background-size: 100% 100%;
+}
+.btn:hover span {
+    color: #fff;
+}
+
+/* about */
+.title {
+    position: relative;
+    margin-top: 35px;
+    border: 1px solid #fff;
+ }
+.title h1,h2 {
+    position: absolute;
+    font-size: 6.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    opacity: 0.06;
+    letter-spacing: 10px;
+}
+.title h2 {
+    font-size: 3.4rem;
+    opacity: 1;
+    letter-spacing: normal;
+    transform: translate(-50%, 50%);
+    color: rgb(118, 118, 118);
+}
+.title h2 span:last-child {
+    color: #ee6192;
+}
+
+/* info */
+#info .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+#info .container .info-card {
+    width: 48%;
+}
+.header {
+    font-size: 1.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(106, 105, 105);
+}
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10px auto;
+    margin-bottom: 30px;
+}
+.info-container p {
+    width: 48%;
+    margin: 12px auto;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgb(118, 118, 118);
+}
+.info-container p span {
+    text-transform: none;
+    font-weight: 500;
+    font-size: 15.2px;
+    color: rgb(69, 69, 69);
+}
+#info .container .info-box {
+    width: 48%;
+    height: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    /* border: 1px solid red; */
+}
+.info-box .card {
+    border: 1.3px solid rgb(204, 204, 204);
+    width: 47%;
+    border-radius: 5px;
+    margin-bottom: 33px;
+    position: relative;
+}
+.info-box .card .number {
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: #ee6192;
+    padding: 10px 0px 0px 30px;
+}
+.info-box .card .number::after {
+    content: "+";
+    font-size: 2.2rem;
+    font-weight: 400;
+    position: absolute;
+    transform: translateY(5%);
+}
+.info-box .card .text {
+    color: rgb(90, 90, 90);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 74px;
+    max-width: 100px;
+}
+.info-box .card .text::before {
+    content: "";
+    width: 32px;
+    height: 0.5px;
+    background-color: rgb(106, 105, 105);
+    position: absolute;
+    display: inline-block;
+    left: 12%;
+    top: 62%;
+}
+.line {
+    content: "";
+    width: 370px;
+    height: 0.7px;
+    background-color: rgb(204, 204, 204);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 40px auto 0px auto;
+}
+
+/* exp */
+#exp .container {
+    max-width: 1130px;
+    margin: 105px auto 0px auto;
+}
+#exp .container .header {
+    text-align: center; 
+}
+#exp .container .slot-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+#exp .container .slot-container .slot {
+    width: 49%;
+    margin: 30px auto;
+    padding-left: 65px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.slot i {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 12px 24px 24px 12px;
+    color: #fff;
+    background-color: #ee6192;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -65px;
+}
+.slot i::after {
+    content: "";
+    background-color: rgb(204, 204, 204);
+    width: 0.7px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+}
+.slot p.year {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(130, 130, 130);
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 9px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+}
+.slot .position {
+    font-size: 17.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(69, 69, 69);
+    margin: 13px auto;
+}
+.slot .position span {
+    font-size: 15.5px;
+    word-spacing: 8px;
+    color: rgb(118, 118, 118);
+}
+.slot .lorem {
+    font-size: 14.5px;
+    font-weight: 400;
+    color: rgb(90, 90, 90);
+    font-family: "Open Sans";
+}
+
+/* porfolio */
+#portf .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#portf .container .portf-card {
+    width: 33%;
+    height: 200px;
+    margin: 18px auto;
+    position: relative;
+    cursor: pointer;
+    transition: all 300ms ease 0s;
+}
+.portf-card img {
+    width: 340px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 6px;
+}
+.portf-card .card-overlay {
+    position: absolute;
+    width: 340px;
+    height: 0;
+    background-image: linear-gradient(#ee6192,#ee6192);
+    background-position: top;
+    border-radius: 6px;
+}
+.portf-card .card-overlay .card-text {
+    text-transform: uppercase;
+    width: max-content;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    left: 50%;
+    top: 0%;
+    transform: translate( -50%, -100%);
+}
+.portf-card:hover .card-overlay {
+    height: 200px;
+}
+.portf-card:hover .card-overlay .card-text {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
