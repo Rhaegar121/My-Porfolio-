@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    align-content: flex-end;
+    /* align-content: flex-end; */
 }
 #navbar .box {
     margin-right: 90px;
@@ -69,6 +69,10 @@ body {
 }
 #navbar i:nth-child(2) {
     padding: 15.5px 24px 24px 17.5px;
+}
+#navbar .active i {
+    color: #fff;
+    background-color: #ee6192;
 }
 #navbar .box:hover i {
     color: #fff;
@@ -166,7 +170,7 @@ body {
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
-    color: rgb(69, 69, 69);
+    color: rgb(100, 100, 100);
     margin-left: -3px;
 }
 .btn i {
@@ -260,7 +264,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
-    /* border: 1px solid red; */
 }
 .info-box .card {
     border: 1.3px solid rgb(204, 204, 204);
@@ -330,7 +333,6 @@ body {
     margin: 30px auto;
     padding-left: 65px;
     position: relative;
-    /* border: 1px solid red; */
 }
 .slot i {
     width: 40px;
@@ -428,4 +430,169 @@ body {
 .portf-card:hover .card-overlay .card-text {
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* contact */
+#contact .container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.contact {
+    width: 32%;
+}
+.contact .para {
+    margin: 10px auto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    color: rgb(106, 105, 105);
+    font-family: "Open Sans";
+}
+.contact .mail-call {
+    position: relative;
+    margin: 20px auto;
+}
+.contact .mail-call i {
+    position: absolute;
+    color: #ee6192;
+    font-size: 2.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #ee6192;
+    border-radius: 6px;
+}
+.contact .mail-call .fa-square-phone {
+    font-size: 2.45rem;
+}
+.contact .mail-call p {
+    margin-left: 50px;
+    text-transform: uppercase;
+    color: rgb(118, 118, 118);
+}
+.contact .mail-call p:last-child {
+    text-transform: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(75, 75, 75);
+    font-family: "Open Sans";
+}
+.contact .social a {
+    background-color: rgb(237, 237, 237);
+    color: rgb(106, 105, 105);
+    text-align: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 0.8rem;
+    display: inline-block;
+    transition: 0.1s;
+    font-size: 16px;
+    line-height: 43.5px;
+}
+.contact .social a:hover {
+    background-color: #ee6192;
+    color: #fff;
+}
+.form {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form input::placeholder {
+    padding-left: 25px;
+    font-size: 14.5px;
+}
+.form input {
+    width: 31%;
+    height: 50px;
+    border-radius: 30px;
+    border: 0.8px solid rgb(204, 204, 204);
+}
+.form textarea::placeholder {
+    font-size: 14.5px;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+.form textarea {
+    width: 100%;
+    height: 170px;
+    margin: 28px auto;
+    border-radius: 30px;
+    border: 0.8px solid rgb(204, 204, 204);
+}
+
+/* blog */
+#blog .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#blog .container .blog-card {
+    width: 31.5%;
+    background-color: rgb(237, 237, 237);
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+#blog .container .blog-card img {
+    border-bottom: 5px solid #ee6192;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#blog .container .blog-card p {
+    text-align: left;
+    margin: 14px auto;
+    max-width: 88%;
+    font-size: 21px;
+    font-weight: 700;
+    color: rgb(90, 90, 90);
+    font-family: "Open Sans";
+    cursor: pointer;
+}
+#blog .container .blog-card p:last-child {
+    font-size: 15.5px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(106, 105, 105);
+    font-family: "Open Sans";
+    margin-bottom: 30px;
+    cursor: auto;
+}
+#blog .container .blog-card:hover .entry-header {
+    color: #ee6192;
+}
+#blog .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+#blog .number a {
+    background-color: rgb(237, 237, 237);
+    color: rgb(106, 105, 105);
+    text-align: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 0.8rem;
+    display: inline-block;
+    transition: 0.1s;
+    font-size: 16px;
+    line-height: 43.5px;
+    text-decoration: none;
+}
+#blog .number a:first-child {
+    background-color: #ee6192;
+    color: #fff;
+}
+#blog .number a:hover {
+    background-color: #ee6192;
+    color: #fff;
 }
