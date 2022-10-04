@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+
+    <!-- custom css -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- fontawesome cdn -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -13,14 +17,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap"
-      rel="stylesheet"
-    />
+    
   </head>
   <body>
+    <!-- animation -->
+    <div class="animation"></div>
+
     <!-- header -->
     <header class="title">
       <h1>contact</h1>
@@ -51,6 +53,7 @@
       </div>
     </nav>
 
+    <!-- contact -->
     <div id="contact">
       <div class="container">
         <div class="contact">
@@ -82,11 +85,14 @@
             <input type="email" placeholder="YOUR EMAIL">
             <input type="text" placeholder="YOUR SUBJECT">
             <textarea cols="30" rows="10" placeholder="YOUR MESSAGE"></textarea>
-            <a href="#" class="btn">
+            <a href="#" class="btn" id="send">
                 <span>send message</span><i class="fa-solid fa-paper-plane"></i></i>
             </a>
+            <div id="msg"><i class="fa-solid fa-square-check"></i> message sent!</div>
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

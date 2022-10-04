@@ -1,20 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@keyframes fadeInDownBig {
+    0% {
+        transform: translateY(-50%);
+        z-index: 11;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200%);
+        z-index: 11;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
     transition: all 0.3s;
+    z-index: 10;
+    animation: 1s ease 0s 1 fadeIn;
 }
 
 body {
+    z-index: 10;
     position: relative;
 }
 
 .container {
+    z-index: 10;
     max-width: 1130px;
     margin: 180px auto 0px auto;
+}
+
+.animation {
+    content: "";
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    background-image: linear-gradient(rgb(245, 207, 235),rgb(245, 207, 235));
+    background-position: top;
+    z-index: 0;
+    opacity: 0;
+    animation: 1.3s ease-in-out 0s 1 fadeInDownBig;
 }
 
 /* navbar */
@@ -48,7 +86,7 @@ body {
     border-radius: 50px;
     background-color: #ee6192;
     display: block;
-    opacity: 0;
+    opacity: 0 !important;
     color: #fff;
     width: fit-content;
     transform: translateX(-20%);
@@ -80,12 +118,12 @@ body {
     z-index: 999;
 }
 #navbar .box:hover a span {
-    opacity: 1;
+    opacity: 1 !important;
     padding: 13px 48px 13px 15px;
     transform: translateX(-60%);
 }
 #navbar .box-l:hover a span {
-    opacity: 1;
+    opacity: 1 !important;
     padding: 13px 48px 13px 15px;
     transform: translateX(-68%);
 }
@@ -207,12 +245,12 @@ body {
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    opacity: 0.06;
+    opacity: 0.06 !important;
     letter-spacing: 10px;
 }
 .title h2 {
     font-size: 3.4rem;
-    opacity: 1;
+    opacity: 1 !important;
     letter-spacing: normal;
     transform: translate(-50%, 50%);
     color: rgb(118, 118, 118);
@@ -374,7 +412,7 @@ body {
 }
 .slot .position span {
     font-size: 15.5px;
-    word-spacing: 8px;
+    word-spacing: 4px;
     color: rgb(118, 118, 118);
 }
 .slot .lorem {
@@ -437,6 +475,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    z-index: 1;
 }
 .contact {
     width: 32%;
@@ -503,10 +542,10 @@ body {
     justify-content: space-between;
 }
 .form input::placeholder {
-    padding-left: 25px;
     font-size: 14.5px;
 }
 .form input {
+    padding-left: 25px;
     width: 31%;
     height: 50px;
     border-radius: 30px;
@@ -514,15 +553,35 @@ body {
 }
 .form textarea::placeholder {
     font-size: 14.5px;
-    padding-left: 25px;
-    padding-top: 15px;
 }
 .form textarea {
+    padding-top: 15px;
+    padding-left: 25px;
     width: 100%;
     height: 170px;
     margin: 28px auto;
     border-radius: 30px;
     border: 0.8px solid rgb(204, 204, 204);
+}
+
+.form #msg {
+    transition: all 1s;
+    opacity: 0;
+    width: 100%;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #28a745;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.form #msg i {
+    margin-right: 8px;
 }
 
 /* blog */
@@ -595,4 +654,43 @@ body {
 #blog .number a:hover {
     background-color: #ee6192;
     color: #fff;
+}
+
+/* myblog */
+#myblog .container {
+    max-width: 740px;
+    margin-bottom: 30px;
+    /* margin: 180px auto 0px auto; */
+}
+#myblog .container .info {
+    margin-right: 14px;
+}
+#myblog .container .info i {
+    color: #ee6192;
+    font-size: 13px;
+    margin-right: 3px;
+}
+#myblog .container .info span {
+    font-size: 13.6px;
+    font-family: "Open Sans";
+    color: rgb(106, 105, 105);
+}
+#myblog .container .entry-header {
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(90, 90, 90);
+    line-height: 55px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#myblog .container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+#myblog .container .entry-text {
+    font-size: 15.5px;
+    font-family: "Open Sans";
+    color: rgb(100, 100, 100);
+    margin: 20px auto;
 }
